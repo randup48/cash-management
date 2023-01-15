@@ -1,0 +1,62 @@
+@media only screen and (min-width: 800px) {
+  #FloatBtn {
+    display: none;
+  }
+  #ModalDelete {
+    width: 400px;
+  }
+
+  #App {
+    #HeaderHome {
+      button {
+        margin: 0;
+      }
+    }
+    #MonthAdd {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+
+      #AddBtn {
+        justify-self: flex-end;
+        display: flex;
+      }
+    }
+    #ChartSummary {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(2, 1fr);
+      #Chart {
+        margin: 0;
+      }
+    }
+  }
+
+  #AddPage {
+    #Form {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      > * {
+        margin: 0;
+      }
+      //   button {
+      //     width: fit-content;
+      //     align-self: flex-start;
+      //     justify-self: start;
+      //   }
+    }
+  }
+
+  #DetailPage {
+    padding: 30px 20px 60px;
+    #DetailItems {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      > * {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // color: rgb(46, 46, 46);
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#App {
+  padding: 30px 20px 60px;
+  > *:not(*:last-child) {
+    margin-bottom: 40px;
+  }
+  #HeaderHome {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    button {
+      justify-self: flex-end;
+    }
+  }
+  #Chart {
+    margin-bottom: 40px;
+  }
+}
+
+#AddPage {
+  padding: 30px 20px 60px;
+  > *:not(*:last-child) {
+    margin-bottom: 24px;
+  }
+}
+#DetailPage {
+  padding: 30px 20px 60px;
+  > *:not(*:last-child) {
+    margin-bottom: 24px;
+  }
+}
