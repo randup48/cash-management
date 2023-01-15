@@ -35,7 +35,7 @@ const CompCard = (title: string, data: Expense[]) => {
         <Typography variant="caption" color={"GrayText"}>
           {title}
         </Typography>
-        <Typography variant="h5">
+        <Typography variant="h5" fontWeight={500}>
           {`Rp. ${data.reduce((before, after) => before + after.amount, 0)}`}
         </Typography>
       </CardContent>
