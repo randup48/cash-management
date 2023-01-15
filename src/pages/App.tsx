@@ -82,14 +82,18 @@ function App() {
           Monthly Expense
         </Typography>
 
-        <Button
-          variant="outlined"
-          startIcon={<DeleteIcon color="primary" />}
-          onClick={handelModalHapusUser}
-          sx={{ my: 1 }}
-        >
-          Delete
-        </Button>
+        {filteredExpense !== null ? (
+          <Button
+            variant="outlined"
+            startIcon={<DeleteIcon color="primary" />}
+            onClick={handelModalHapusUser}
+            sx={{ my: 1 }}
+          >
+            Delete
+          </Button>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div id="MonthAdd">
