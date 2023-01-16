@@ -30,13 +30,15 @@ export const DetailPage = () => {
         Detail Expense
       </Typography>
 
-      <Chip
-        label={`${
-          category.find((val) => val.id === state[0].category)?.value ?? "-"
-        }`}
-        color="primary"
-        sx={{ color: "white" }}
-      />
+      {state.length ? (
+        <Chip
+          label={`${
+            category.find((val) => val.id === state[0].category)?.value ?? "-"
+          }`}
+          color="primary"
+          sx={{ color: "white" }}
+        />
+      ) : null}
 
       {state.length ? (
         <Stack id="DetailItems" spacing={2}>

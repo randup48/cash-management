@@ -10,7 +10,7 @@ import { category, filterByCategory, filterMonthYear } from "../utils/constant";
 import { useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import { Expense, FilterCategoryExpense } from "../utils/models/expense";
-import { useAppDispatch, useAppSelector } from "../store/hook";
+import { useAppDispatch } from "../store/hook";
 import { setInitial } from "../store/dataExpenseSlice";
 import { SummaryExpenses } from "../components/summary_category";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -25,7 +25,6 @@ function App() {
   const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
-  const initValue = useAppSelector((state) => state.data.value);
 
   const [dataLocal, setDataLocal] = useState<Expense[]>([]);
   const [selectedDate, setSelectedDate] = useState<number | null>(Date.now());
