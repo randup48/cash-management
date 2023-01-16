@@ -42,8 +42,7 @@ function App() {
     if (data !== null) {
       let parsedData: Expense[] = JSON.parse(data);
 
-      if (initValue.length === 0)
-        parsedData.map((e) => dispatch(setInitial(e)));
+      dispatch(setInitial(parsedData));
 
       setDataLocal(parsedData);
 
@@ -62,6 +61,7 @@ function App() {
     );
 
     setLocalStorage(deleteData);
+    dispatch(setInitial([]));
     setIsDelete(false);
     setModalHapusData(!modalHapusData);
   };

@@ -15,10 +15,8 @@ export const counterSlice = createSlice({
   name: "action",
   initialState,
   reducers: {
-    setInitial: (state, action: PayloadAction<Expense>) => {
-      let { value } = state;
-
-      value.push(action.payload);
+    setInitial: (state, action: PayloadAction<Expense[]>) => {
+      state.value = action.payload;
     },
     addData: (state, action: PayloadAction<Expense>) => {
       let { value } = state;
